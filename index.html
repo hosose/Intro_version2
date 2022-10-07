@@ -1,61 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>자기소개서</title>
-        <link rel="stylesheet" href="clock_css.css"/>
-        <style>
-            body{
-                background-color:white;
-            }
-            #tt{
-                display : grid;
-                grid-template-columns: repeat(2, 1fr) ;
-                grid-template-rows: repeat(1, 50px);
-                grid-gap: 5px;
-                
-                text-align: center;
-                padding : 25px;
-                font-size: 25px;
-                border-bottom: 5px solid lightsalmon;
-            }
-            
-            .ci {
-                padding : 1rem;
-            }
+  <head>
+    <meta charset="utf-8" />
+    <title>자기소개서</title>
+    <link rel="stylesheet" href="clock_css.css" />
+    <style>
+      body {
+        background-color: white;
+      }
+      #tt {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 50px);
+        grid-gap: 5px;
 
-            
-            a {
-                text-decoration: none;
-                text-align: center;
-            }
-            h1 {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <h1><a href="index.html" >Introduce Myself</a></h1>
-        <div id="tt">
-            <div class="ci">
-                <a href="https://pabeba.tistory.com/m"  target="_blank">블로그</a> 
-            </div>
-            <div class="ci">
-                <a href="https://github.com/hosose"  target="_blank">Github</a>
-            </div>
-        </div>
-        <div id="game">
-            <input type = 'button' value ='미니 게임 실행' onclick="window.open('game.html')"
-            style="width: 100pt;height: 60pt;">
-        </div>
-        <div class = "container">
-            <div class = "clock">
-                <h1 id="time"></h1>
-            </div>
-            <button id="go">Go</button>
-            <button id="stop">Stop</button>
-        </div>
-    
-        <script src = 'clock.js'></script>
-    </body>
+        text-align: center;
+        padding: 25px;
+        font-size: 25px;
+        border-bottom: 5px solid lightsalmon;
+      }
+
+      .ci {
+        padding: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      .root {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+      }
+      .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      #game {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><a href="index.html">Introduce Myself</a></h1>
+    <div id="tt">
+      <div class="ci">
+        <a href="https://pabeba.tistory.com/m" target="_blank">블로그</a>
+      </div>
+      <div class="ci">
+        <a href="https://github.com/hosose" target="_blank">Github</a>
+      </div>
+    </div>
+    <div class="root">
+      <div class="intro"></div>
+    </div>
+    <script src="intro.js"></script>
+    <div id="game">
+      <input
+        type="button"
+        value="미니 게임 실행"
+        onclick="window.open('game.html')"
+        style="width: 100pt; height: 60pt"
+      />
+    </div>
+
+    <div class="container">
+      <div class="clock">
+        <h1 id="time"></h1>
+      </div>
+      <button id="go">Go</button>
+      <button id="stop">Stop</button>
+    </div>
+
+    <script src="clock.js"></script>
+  </body>
 </html>
