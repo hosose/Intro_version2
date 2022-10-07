@@ -4,53 +4,9 @@
     <meta charset="utf-8" />
     <title>자기소개서</title>
     <link rel="stylesheet" href="clock_css.css" />
-    <style>
-      body {
-        background-color: white;
-      }
-      #tt {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(1, 50px);
-        grid-gap: 5px;
-
-        text-align: center;
-        padding: 25px;
-        font-size: 25px;
-        border-bottom: 5px solid lightsalmon;
-      }
-
-      .ci {
-        padding: 1rem;
-      }
-
-      a {
-        text-decoration: none;
-        text-align: center;
-      }
-      h1 {
-        text-align: center;
-      }
-      .root {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
-      }
-      .intro {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid black;
-        border-radius: 10px;
-        padding: 20px;
-      }
-      #game {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calender_css.css" />
+    <style></style>
   </head>
   <body>
     <h1><a href="index.html">Introduce Myself</a></h1>
@@ -69,12 +25,40 @@
     <div id="game">
       <input
         type="button"
-        value="미니 게임 실행"
+        value="미니 게임 실행
+click!"
         onclick="window.open('game.html')"
-        style="width: 100pt; height: 60pt"
+        style="
+          width: 100pt;
+          height: 60pt;
+          background-color: antiquewhite;
+          border-radius: 10px;
+        "
       />
     </div>
-
+    <div class="calender">
+      <div class="header">
+        <div class="year-month"></div>
+        <div class="nav">
+          <button class="nav-btn go-prev" onclick="prevMonth()">&lt;</button>
+          <button class="nav-btn go-today" onclick="goToday()">Today</button>
+          <button class="nav-btn go-next" onclick="nextMonth()">&gt;</button>
+        </div>
+      </div>
+      <div class="main">
+        <div class="days">
+          <div class="day">Sun</div>
+          <div class="day">Mon</div>
+          <div class="day">Tue</div>
+          <div class="day">Wed</div>
+          <div class="day">Thu</div>
+          <div class="day">Fri</div>
+          <div class="day">Sat</div>
+        </div>
+        <div class="dates"></div>
+      </div>
+    </div>
+    <script src="calender.js"></script>
     <div class="container">
       <div class="clock">
         <h1 id="time"></h1>
