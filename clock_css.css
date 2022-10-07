@@ -1,14 +1,14 @@
-.container{
-    text-align: center;
-    position : absolute;
-    top : 80%;
-    left : 45%;
-
+.container {
+  text-align: center;
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  margin: 20px;
+  padding-bottom: 50px;
 }
-.clock{
-    width: 200px;
-    margin: 5px auto;
-    border :2px solid black;
-    border-radius: 10px;
-   
+.clock {
+  width: 200px;
+  margin: 5px auto;
+  border: 2px solid black;
+  border-radius: 10px;
 }
