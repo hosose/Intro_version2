@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>자기소개서</title>
+        <link rel="stylesheet" href="clock_css.css"/>
         <style>
             body{
-                background-color: rgb(106, 104, 104);
+                background-color:white;
             }
             #tt{
                 display : grid;
@@ -34,18 +35,27 @@
         </style>
     </head>
     <body>
-        <h1><a href="a.html" style="color : white">Introduce Myself</a></h1>
+        <h1><a href="a.html" >Introduce Myself</a></h1>
         <div id="tt">
             <div class="ci">
-                <a href="https://pabeba.tistory.com/m" style="color : white" target="_blank">블로그</a> 
+                <a href="https://pabeba.tistory.com/m"  target="_blank">블로그</a> 
             </div>
             <div class="ci">
-                <a href="https://github.com/hosose" style="color : white" target="_blank">Github</a>
+                <a href="https://github.com/hosose"  target="_blank">Github</a>
             </div>
         </div>
         <div id="game">
             <input type = 'button' value ='미니 게임 실행' onclick="window.open('index.html')"
             style="width: 100pt;height: 60pt;">
         </div>
+        <div class = "container">
+            <div class = "clock">
+                <h1 id="time"></h1>
+            </div>
+            <button id="go">Go</button>
+            <button id="stop">Stop</button>
+        </div>
+    
+        <script src = 'clock.js'></script>
     </body>
 </html>
